@@ -1,108 +1,11 @@
-/*
-150420
-
-CapsLock + ?
 
 
-1 = Поиск и всякое
-G - google
-Y - yandex
-T+5 - яндекс переводчик
-T+6 - гугл переводчик
-
-
-
-2 = Хостинги
-F - fozzy (везде страницы входа)
-C - cloudflare
-H - Hostinger
-
-
-3 = Для кода
-O - php.su
-P - php.net
-Потом = https://keycode.info/
-
-
-
-4 = Платежки (Вход)
-M = перф мон
-P = пейер
-W = WebMoney
-Q = Qiwi
-
-Авторство:
-1 = Caps + Q W E
-2 = Caps + I O P
-3 = Caps + G 6
-
-
-
-
-ДЕБАГ:
-Caps + A + S = Start
-Caps + A + E = End
-
-
-
-потом все это обфусцировать
-
-*/
-
-//alert(pressed123.join('\n'));
 
 	var arr_keys_pressed = new Array(); //[]  new Array();
 	
 	var key_combo_count_pressed = 1; //Какое сейчас нажатие комбы
 	
 
-	var arr_keys_comb =
-	[
-		
-		[ ["CapsLock","Digit1","KeyY"] , function(){ window.open("https://yandex.ru/", "_blank"); } ],
-		[ ["CapsLock","Digit1","KeyG"] , function(){ window.open("https://www.google.com/", "_blank");} ],
-		[ ["CapsLock","Digit1","KeyT","Digit5"] , function(){ window.open("https://translate.yandex.ru/", "_blank");} ],
-		[ ["CapsLock","Digit1","KeyT","Digit6"] , function(){ window.open("https://translate.google.com/", "_blank");} ],
-		
-		
-		[ ["CapsLock","Digit2","KeyF"] , function(){ window.open("https://accounts.fozzy.com/clientarea.php", "_blank");} ],
-		
-		
-		[ ["CapsLock","Digit3","KeyO"] , function(){ window.open("http://www.php.su/", "_blank");} ],
-		[ ["CapsLock","Digit3","KeyP"] , function(){ window.open("http://www.php.net/", "_blank");} ],
-		
-		
-		// ################
-		
-		[ ["CapsLock","KeyA","KeyS"] , function(){ antiplag_debug_start(); alert("HotKeys Debug START!!!"); } ],
-		[ ["CapsLock","KeyA","KeyE"] , function(){ antiplag_debug_end(); alert("HotKeys Debug END!!!"); } ],
-		
-		// ################
-		
-		[ ["ControlLeft","KeyS"] , function(){ KeyKiller(event); alert("YOU SHALL NOT SAVE!!!"); } ],
-		[ ["ControlLeft","KeyA"] , function(){ KeyKiller(event); alert("Нет"); } ],
-		[ ["ControlLeft","KeyU"] , function(){ KeyKiller(event); alert("Ай-яй-яй, нехорошо..."); } ],
-		[ ["ControlLeft","KeyC"] , function(){ KeyKiller(event); alert("Плагиатить нехорошо :("); } ],
-		[ ["ControlLeft","KeyP"] , function(){ KeyKiller(event); alert("Бумага закончилась"); } ],
-		[ ["ControlLeft","KeyI","ShiftLeft"] , function(){ KeyKiller(event); alert("Мдааа..."); } ],
-		[ ["ControlLeft","KeyJ","ShiftLeft"] , function(){ KeyKiller(event); alert("О, мало кто знает эту комбинацию...))."); } ],
-		[ ["F12"] , function(){ KeyKiller(event); alert("Думал будет так просто?"); } ],
-		
-		// ################
-		
-		[ ["CapsLock","KeyQ","KeyW","KeyE"] , function()
-			{ alert("Доказательство авторства 1/8:\nЕсли вы это читаете, то комбинацию вам сказал автор проекта.\n");} ],
-		[ ["CapsLock","KeyI","KeyO","KeyP"] , function()
-			{ alert("Доказательство авторства 2/8:\nЕсли вы это читаете, то комбинацию вам сказал автор проекта.\n");} ],
-		[ ["CapsLock","KeyG","Digit6"] , function()
-			{ alert("Доказательство авторства 3/8:\nЕсли вы это читаете, то комбинацию вам сказал автор проекта.\n");} ]
-		
-	];
-	// ShiftLeft ControlLeft AltLeft    Digit1 KeyA
-	
-	
-	
-	
 	
 	
 	// ########################
@@ -231,23 +134,26 @@ Caps + A + E = End
 		
 		// #############
 		
-		switch(key_combo_count_pressed)
+		if ( joke_alert_active )
 		{
-			case  5: alert("Ээммм, привет... (5 раз)"); break;
-			case 10: alert("Хватит тыкать! (10 раз)"); break;
-			case 15: alert("Не надоело? (15)(20 25 30 35 40 60 75 99 999)"); break;
-			case 20: alert("Может хватит? (20)"); break;
-			case 25: alert("Прекрати! (25)"); break;
-			case 30: alert("ЗАЧЕМ? Просто скажи мне ЗАЧЕМ???? (30)"); break;
-			case 35: alert("О привет, а я тебя знаю.mp3 (35)"); break;
-			case 40: alert("Это последнее сообщение, дальше ничего не будет. Я предупредил... (40)"); break;
-			case 60: alert("Еще чуть-чуть... (60)"); break;
-			case 75: alert("Мне было лень придумывать фразу, поэтому сайчас она здесь. (75)"); break;
-			case 99: alert("Либо ты все-таки открыл инспектор и подправил переменную, либо ты читаешь это в коде, либо тебе совсем нечего делать. (99)"); break;
-			case 999: alert("Ты 100% открыл исходный код скрипта, привет коллегам-айтишникам))) (999)"); break;
-			default:  break;
+			switch(key_combo_count_pressed)
+			{
+				case  5: alert("Ээммм, привет... (5 раз)"); break;
+				case 10: alert("Хватит тыкать! (10 раз)"); break;
+				case 15: alert("Не надоело? (15)(20 25 30 35 40 60 75 99 999)"); break;
+				case 20: alert("Может хватит? (20)"); break;
+				case 25: alert("Прекрати! (25)"); break;
+				case 30: alert("ЗАЧЕМ? Просто скажи мне ЗАЧЕМ???? (30)"); break;
+				case 35: alert("О привет, а я тебя знаю.mp3 (35)"); break;
+				case 40: alert("Это последнее сообщение, дальше ничего не будет. Я предупредил... (40)"); break;
+				case 60: alert("Еще чуть-чуть... (60)"); break;
+				case 75: alert("Мне было лень придумывать фразу, поэтому сайчас она здесь. (75)"); break;
+				case 99: alert("Либо ты все-таки открыл инспектор и подправил переменную, либо ты читаешь это в коде, либо тебе совсем нечего делать. (99)"); break;
+				case 999: alert("Ты 100% открыл исходный код скрипта, привет коллегам-айтишникам))) (999)"); break;
+				default:  break;
+			}
+				key_combo_count_pressed++;
 		}
-			key_combo_count_pressed++;
 		
 		// #############
 		
@@ -333,7 +239,7 @@ Caps + A + E = End
 	// */
 	
 	
-	if ( key_killer_active === true )
+	if ( key_killer_active )
 	{
 		document.addEventListener( 'keyup',   function(event) { on_keyup_event(event);  } );
 		
