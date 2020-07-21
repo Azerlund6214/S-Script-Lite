@@ -1,0 +1,565 @@
+<?php
+	#############################
+	### Переменные CSS ###
+	#############################
+	### Переменные HTML ###
+	#############################
+	### Переменные JS ###	
+	#############################
+?>
+<!-- SECTION_DESCRIPTION -->
+<header id="sec_header">
+	
+	
+	<!-- **** CSS **** -->
+	
+		<!-- ВСЯ полоса навбара -->
+		<style>
+			
+			.navbar
+			{
+				font-family: "Montserrat";
+				
+				background-color: transparent !important; /* Вид без скролла */
+				
+				padding-top:    25px; /* 25 = Наверху экрана - отступ сверху */
+				padding-bottom: 25px; /* 25 = Наверху экрана - отступ снизу */
+				
+				
+				
+				/*  ****************************************  */
+				/*  *** Ниже что НЕ меняется при скролле ***  */
+				
+				-webkit-transition: 0.5s all ease; /* Переход */
+						transition: 0.5s all ease; /* Именно здесь, вниз не переносить */
+				
+				padding-left:    0px; /* НЕ меняется при скролле */
+				padding-right:   0px; /* НЕ меняется при скролле */
+				/* Отступы от краев настраиваются в классе .navbar.container */
+				
+			}
+			
+			
+			/* Весь навбар ПОСЛЕ прокрутки - что меняется */
+			.navbar.past-main
+			{
+						
+					background-color: rgba(255, 255, 255, 0.99) !important; /* Цвет фона навбара ПОСЛЕ прокрутки */
+					
+					padding-top:    15px; /* 15 = Отступ после прокрутки - сверху */
+					padding-bottom: 15px; /* 15 = Отступ после прокрутки - снизу */
+					
+					/* Появляются тени */
+					/*    !!!!!!!!!!   ПЕРЕДЕЛАТЬ ИХ, нифига не видно       */
+					-webkit-box-shadow: 0 1px 5px 0 rgba(96, 96, 96, 0.3);
+					   -moz-box-shadow: 0 1px 5px 0 rgba(96, 96, 96, 0.3);
+							box-shadow: 0 1px 5px 0 rgba(96, 96, 96, 0.3);
+					
+			}
+			
+		</style>
+		
+			
+		<!-- .container - Все содержимое навбара -->
+		<!-- Потом попробовать смержить с .nav (в отдельном файле) -->
+		<style>
+			
+			/* Set header size */
+			.navbar .container
+			{
+				
+				padding-right: 20px; /* Отступы от краев экрана */
+				padding-left:  20px;
+				/* Возможно лучше задавать в % ибо там есть медиа запросы */
+				/* Всегда одинаковые значения, чтоб было семмитрично */
+				/* Без отступов все будет у краев в мобильной версии */
+				
+				
+				/* !!! Margin по дефолту стоит AUTO в этом классе */
+			}
+			
+		</style>
+		
+		
+		<!-- Лого -->
+		<style>
+			.navbar .navbar-brand
+			{
+				font-size: 1rem; /* В B4 было 1.25rem   из-за этого лого слегка улетало наверх */
+				font-weight: 600;
+				
+				padding: 0rem 0rem;
+				/* .3125rem 0rem = Дефолт Б4 отступ сверху и снизу */
+				
+				margin:  0rem 1rem 0rem 0rem;
+				/* 0100 = Дефолт Б4отступ справа */
+				
+				
+				
+				color: #563D7C; /* Цвет лого БЕЗ прокрутки */
+			}
+			
+			.navbar .navbar-brand:hover
+			{
+				color: green; /* Цвет лого БЕЗ прокрутки */
+			}
+			
+			
+			
+			.past-main .navbar-brand
+			{
+					color: #4957B8; /* Цвет лого ПОСЛЕ прокрутки */
+			}
+			
+			.past-main .navbar-brand:hover
+			{
+					color: red; /* Цвет лого ПОСЛЕ прокрутки */
+			}
+			
+		</style>	
+		
+		
+		<!-- Все меню ссылок целиком (положение блока) -->
+		<style>
+			
+			#navbar_menu_ul
+			{
+				/*
+				Выбрать одно
+				
+				сделать еще justified
+				
+				margin:       auto; // меню посередине
+				margin-right: auto; // меню слева
+				*/
+				
+				margin-left:  auto; // меню справа
+			}
+		
+		</style>
+		
+		
+		<!-- Блоки элементов конкретных ссылок (отступы между ссылками) -->
+		<style>
+			
+			
+			
+			/* Отступы с краев назначаются в .container и они общие для всего хедера */
+			/* То есть ссылка никогда не будет впритык к краю экрана */
+			
+			/* Отсутупы между ссылками */
+			#navbar_menu_ul .nav-item
+			{
+				margin-right: 0;
+
+			}
+			
+			/* Если страница широкая, то растягиваем ссылки более широко */
+			@media only screen and (min-width: 767px)
+			{ #navbar_menu_ul .nav-item {
+					margin-right: 15px; }
+			}
+			
+		</style>	
+		
+		
+		<!-- Текст ссылок -->
+		<style>
+			
+			/* Общий внешний вид ТЕКСТА ссылок */
+			
+			#navbar_menu_ul .nav-item
+			{
+				font-size: 0.85rem;
+				font-weight: 400;
+				
+				text-transform: capitalize;
+				text-align: center;
+				
+				
+				border-radius: 8px;
+				//border-bottom: 2px solid #1abc9c; 
+			}
+			
+			
+			
+
+			
+			
+			
+			
+			/* Вид блока ссылки = Дефолт */
+			#navbar_menu_ul .nav-item 
+			{
+				color: #FFFFFF; /* Цвет текста ссылок БЕЗ прокрутки */
+				
+				
+				/* Тут весь базовый внешний вид */
+				
+				-webkit-transition: 0.3s all ease; /* Переход */
+						transition: 0.3s all ease;
+				
+			}
+			
+			/* Вид блока ссылки = При наведении */
+			#navbar_menu_ul .nav-item:hover
+			{
+			  color: red; /* Цвет ховера ссылок БЕЗ прокрутки F1F1F1 */
+			}
+			
+			
+			
+			
+			
+			/* Вид блока ссылки = После прокрутки = Дефолт */
+			.navbar.past-main #navbar_menu_ul .nav-item
+			{
+				color: #f00; /* Цвет текста ссылок */
+			}
+			
+			
+			/* Вид блока ссылки = После прокрутки = При наведении */
+			.navbar.past-main #navbar_menu_ul .nav-item:hover
+			{
+				color: yellow; /* Цвет текста ссылок */
+			}
+			
+			
+			
+			/* Вид текущего блока */
+			#navbar_menu_ul .active
+			{
+				
+				background: blue;
+			}
+			
+			
+			
+			
+			
+			
+			/* НЕ ТРОГАТЬ = Чтоб цвет не переопределялся дефолтами B4 и стилями тега А */
+			#navbar_menu_ul .nav-item .nav-link
+			{
+				color: inherit; /* Либо везде писать !important */
+			}
+			
+		</style>	
+		
+		
+		<!-- #header_button - Большая кнопка -->
+		<style>
+			
+			#header_button
+			{
+			
+				color:       #25d06f ;
+				font-weight: 600 ;
+				 
+				width: 190px;
+				/* Высота как у всех */
+				
+				border-radius:    25px ;
+				background-color: green ;
+			
+			}
+			
+		</style>	
+		
+		
+		<!-- Toggler - мобильная кнопка меню -->
+		<style>
+			
+			.navbar .navbar-toggler
+			{
+				border: none; /* Убирает квадратную рамку вокруг полосок */
+			}
+			
+			.navbar .navbar-toggler:focus
+			{
+				outline: none; /* Убирает оранжевую рамку при нажатии (выделении) */
+			}
+			
+			/*  */
+			
+		</style>
+		
+	<!-- **** /CSS **** -->
+	
+	
+	
+	
+	<!-- **** HTML **** -->
+	<!-- navbar-light = цвет кнопки меню -->
+        <nav class="navbar navbar-expand-md navbar-light  fixed-top">
+          <div class="container">
+            
+			<!-- Logo -->
+			<div class="navbar-header12345       ">
+				
+					<!-- Содержимое навбара -->
+					<!--
+					<img src="frontend/assets/header_logo/hashlabs.png" alt="если картинка 404" width="75" height="48">
+					-->
+				<a class="navbar-brand" title="title при наведении" href="#123">AWC-Capital</a>
+				
+            </div>
+			<!-- Logo -->
+			
+			
+			<!-- Toggler -->
+			<button class="navbar-toggler" type="button"
+				data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-expanded="false"  aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+            
+				<!-- Button Image -->
+					<!--
+						Скачать дефолтную B4 иконку с www.w3.org
+						<span class="navbar-toggler-icon">  </span>
+					ЛИБО
+						Взять из FontsAwesome
+						<i class="fas fa-bars">  </i>
+					-->
+					
+					<i class="fas fa-bars"></i>
+					
+				<!-- Button Image -->
+			
+            </button>
+			<!-- Toggler -->
+			
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			
+				<!-- Только где сами ссылки -->
+				<!--
+
+
+				-->
+				<ul class="navbar-nav" id="navbar_menu_ul" >
+					<li class="nav-item"><a class="nav-link" href="#p1">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#p1">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="#p1">p1Features</a></li>
+					<li class="nav-item"><a class="nav-link" href="#p2">Pricing</a></li>
+					<li class="nav-item"><a class="nav-link" href="#p3">Contact</a></li>
+					<li class="nav-item"><a class="nav-link" href="#p4">Buy Now</a></li>
+				</ul>
+				
+				
+				
+				<!-- Right Button -->
+				<ul class="nav navbar-nav   ml-auto  " > <!-- ml-auto -->
+						
+					<!-- TODO = Сюда впихнуть пхп иф-елсе  для вывода кнопок логина или ЛК (отличия в переменных)
+					2 кнопки -  в ЛК  и логаут
+					-->
+					<li id="header_button_li" class="nav-item  ">
+						<a  id="header_button" class="btn" href="#p3">SignIn / SignUp</a>
+					</li>
+					
+				</ul>
+				<!-- END Right Button -->
+				
+				
+				
+				
+			</div>
+          
+		  </div>
+        </nav>
+	<!-- **** /HTML **** -->
+	
+	
+	
+	
+	<!-- **** JS **** -->
+		
+		<!-- Растягивание и прозрачность вверху страницы, сворачивание меню при клике -->
+		<script type="text/javascript">
+		jQuery(function($)
+		{
+			"use strict";
+
+			// get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
+			var mainbottom = $('body').offset().top;
+
+			// on scroll,
+			$(window).on('scroll',function()
+			{
+
+				// we round here to reduce a little workload
+				stop = Math.round($(window).scrollTop());
+				if (stop > mainbottom)
+				{
+					$('.navbar').addClass('past-main');
+				}
+				else
+				{
+					$('.navbar').removeClass('past-main');
+				}
+				
+			});
+
+			
+			// Collapse navbar on click
+			$(document).on('click.nav','.navbar-collapse.in',function(e)
+			{
+				if( $(e.target).is('a') )
+				{
+					$(this).removeClass('in').addClass('collapse');
+				}
+			});
+			
+			//Закрытие мобильного меню при клике по ссылке
+			// Closes responsive menu when a scroll trigger link is clicked
+			$('.navbar-js-scroll-trigger').on('click', function () {
+			  $('.navbar-collapse').collapse('hide');
+			});
+			
+		});
+		</script>
+		
+		<!-- Функция и событие = выставления .active в меню -->
+		<script type="text/javascript">
+		
+			/*
+				Добавление класса .active при скролле
+				TODO: Дописать учитывание высоты навбара при расчетах (см мой скрипт плавной прокрутки)
+			*/
+			/*
+			!!!!!! Если хреф навбара ссылается на несуществующий элемент(напр вбил от балды),
+				то тут будет вылезать КУЧА ошибок вида "не нашел элемент"
+				
+				не смертельно, по за каждый маленький скролл их будет штук 50
+				
+				исправить код не смог
+				
+				РЕШЕНИЕ:  ВСЕГДА назначать в хрефы ТОЛЬКО реа существующие элементы
+				МОЖНО всем одинаковый, но главное существующий на странице
+				
+			*/
+			$(document).ready(function ()
+			{
+		 
+				function Scroll_block(){
+					var scroll_top = $(document).scrollTop();
+					
+					$("#navbar_menu_ul a").each( function()
+					{
+						
+						//console.log("###############");
+						
+						
+						var hash = $(this).attr("href"); // Тут лежит "#123"
+						//console.log(hash);
+						
+						var target = $(hash); // Элемент с "#123"
+						
+						/*try{
+						} catch(e)
+						{
+							console.log("err");
+							return;
+						} */
+						
+						//console.log(target);
+						//console.log("123");
+						
+						//console.log( target.position() );
+						
+						// !!!!!!!!!!!! Тут несмертелная ошибка с ".top"
+						//if( typeof(target) == "undefined")
+						//	alert("123");
+							
+						//if( target.top )
+						//	alert("123");
+						var pos_top = target.position().top ;
+						//console.log(pos_top);
+						//return;
+						
+						//if( typeof(pos_top) == "undefined")
+						//if( typeof pos_top !== "undefined" )
+						//if( pos_top === undefined )
+						//	alert("123");
+						
+						/*
+						if(typeof pos_top == "undefined")
+						  console.log("Undefined");
+						else
+						  console.log("Not Undefined");
+						  
+						if( !! pos_top )
+						  console.log("Not Undefined");
+						else
+						  console.log("Undefined");
+						*/
+						
+						/*
+						try{	
+						}catch(e)
+						{
+						//var pos_top = target.position().top ;
+						console.log(pos_top);
+						console.log(e);
+						}
+						*/
+						//return;
+						
+						//if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top)
+						if ( pos_top <= scroll_top && pos_top + target.outerHeight() > scroll_top)
+						{
+							$("#navbar_menu_ul li.active").parent().removeClass("active");
+							$(this).parent().addClass("active");
+							
+							//alert( target.position().top ); // норм числа
+							
+						}
+						else 
+						{
+							//alert( target.position().top ); // 
+							$(this).parent().removeClass("active");
+						}
+					});
+				}
+			 
+			 
+				$(document).on("scroll", Scroll_block); // Вешаем событие
+			 
+				/*
+					Вроде как плавная прокрутка, юзлесс ибо есть отдельный скрипт для всего сайта
+				
+				$("a[href^=#]").click(function(e){
+					e.preventDefault();
+			 
+					$(document).off("scroll");
+					$("#navbar_menu_ul li.active").parent().removeClass("active");
+					$(this).parent().addClass("active");
+					var hash = $(this).attr("href");
+					var target = $(hash);
+			 
+					$("html, body").animate({
+						scrollTop: target.offset().top
+					}, 500, function(){
+						window.location.hash = hash;
+						$(document).on("scroll", Scroll_block);
+					});
+			 
+				});
+				*/
+			 
+			});
+			
+			
+		</script>
+		
+	<!-- **** /JS **** -->
+	
+	
+</header>
+<?php
+
+#$SS_Class->Add_libs_for_include( array( "" ) );
+
+#unset ( );	
+
+?>

@@ -2,7 +2,7 @@
 
 # ХОСТИНГ = В начале путей php include не должно быть слеша (иначе 500) !!!!!!!!!!
 # ХОСТИНГ = Недопустимая конструкция в HTML  <--### ...   Это ключевое слово для PHP SSI = <--# include 123 -->
-# ХОСТИНГ = Всегда чекать логи с ISP, там все ошибки
+# ХОСТИНГ = Всегда прверять логи с сервера, там все ошибки
 # ХОСТИНГ = 
 # ХОСТИНГ = 
 
@@ -34,19 +34,21 @@ $SS_Class = new MAIN_SSCRIPT_CLASS();
 
 #=========================================
 
-$SS_Class->Get_current_project_name(  ); # Читает имя проекта из файла ИЛИ из get
 $SS_Class->Get_current_page_name(  ); # Пагинация - находим нужную страницу
+//exit ($SS_Class -> PAGE_NAME) ;
 
 #========================
 
+// явная папка проекта тут и в Get_page_folder()
+
 # Подключаем главный файл со списком страниц проекта
-@include $SS_Class->Get_project_folder(  ) . "defines=1=pages_info_arr.php";
+include "project/" . "defines=1=pages_info_arr.php";
 
 # Объявляем глобальные переменные и дефайны проекта (шрифты + css_selectable)
-@include $SS_Class->Get_project_folder(  ) . "defines=2=project_const.php";
+include "project/" . "defines=2=project_const.php";
 
 # Объявляем php библиотеки и классы для этого проекта
-@include $SS_Class->Get_project_folder(  ) . "defines=3=project_includes.php";
+include "project/" . "defines=3=project_includes.php";
 
 #========================
 
@@ -54,7 +56,6 @@ $SS_Class->Get_current_page_name(  ); # Пагинация - находим ну
 $SS_Class -> Get_project_pages_arr( $Pages_info_arr_declared , $Pages_info_arr, $Pages_names_arr );
 # Проверка существования целевой страницы = РАБОТАЕТ (либо 301 на главную ( "Location: /") )
 $SS_Class->Check_page_exist( );
-
 #========================
 
 /* дебаг
@@ -108,6 +109,7 @@ echo "<html lang='ru'> \n";
 		include "s-script/8=proj=css_selectable.html"; # ПРОЕКТ - ксс для этого проекта
 		include "s-script/9=proj=fonts.html"; # ПРОЕКТ = Шрифты проекта
 		
+//echo "123";
 	echo "</head> \n\n\n";
 	
 	

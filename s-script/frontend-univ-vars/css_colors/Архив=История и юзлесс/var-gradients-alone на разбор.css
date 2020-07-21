@@ -1,0 +1,123 @@
+
+/* всякие доп цвета(можно со временем переносить в основу) */
+
+
+
+/* vargrad: градиент(перем цветов var1, var2) */
+
+
+
+
+/* ЗАБРАЛ ВСЕ УЛЬТРА, ОСТАЛЬНОЕ НЕТ СМЫСЛА РАЗБИРАТЬ */
+
+
+
+/*
+
+
+
+	
+	### ПОТОМ ПОВЕРТЕТЬ ГРАДУСЫ, тут только выбор норм цветов
+	# 127  217  336   градусов
+	
+	почти топ, убрать серый	linear-gradient( 127deg, #ad60fb, #07ccca, #da795b, #3f2757, #10c1eb );	
+	
+	правая часть  linear-gradient( 127deg, #a55e15, #f16a67, #86f73c, #29ec76, #23d8da );
+	
+	топ, убрать середину linear-gradient( 127deg, #46c892, #0bda40, #45ee25, #d7f52b );
+	
+
+	
+	
+	
+	linear-gradient( 127deg, #62ff6d, #528bfa );
+	linear-gradient( 127deg, #7fca23, #38b2d3, #0c1056 );
+	
+	убрать первый цвет  linear-gradient( 127deg, #d42995, #5e93b7, #aee97e );
+	
+	
+	linear-gradient( 127deg, #6110d6, #aa3e51, #796acc );   сделать левый посветлее, средний побелее
+	
+	ультра linear-gradient( 127deg, #fed692, #3fc89b, #1e46c1 );
+	linear-gradient( 127deg, #29c78d, #5c689d, #5f3b7f );
+	linear-gradient( 127deg, #6edab5, #8dd153, #e9ac0c );
+	linear-gradient( 127deg, #ff6738, #2cb651, #37bea9 );   сделать потеменн правый цвет
+	linear-gradient( 127deg, #51d763, #27b1cf, #9e436b );  сделать правый посветлее
+	linear-gradient( 127deg, #239e26, #3beb77, #9b80a4 );
+	linear-gradient( 127deg, #ee67d8, #5bec5d, #440198 );
+	linear-gradient( 127deg, #3ef564, #7290a2, #5df784 );  подправить 2
+	linear-gradient( 127deg, #5328dd, #17ee48, #f1564e );  подправить 2
+	linear-gradient( 127deg, #fccd19, #e52d55 );
+	linear-gradient( 127deg, #b269ae, #12db13 );
+	
+	linear-gradient( 127deg, #b7da05, #4ad062 );
+	linear-gradient( 127deg, #e1e100, #14edfa );
+	linear-gradient( 127deg, #0ae290, #33294b );
+	linear-gradient( 127deg, #c39eea, #3bd3cf );
+	linear-gradient( 127deg, #07b09f, #27ea76 );
+	linear-gradient( 127deg, #d14b9f, #4452ca );
+	linear-gradient( 127deg, #e2eb38, #0091e1 );
+	
+	linear-gradient( 127deg, #47d680, #dd9448 );
+	linear-gradient( 127deg, #6adbfb, #e77f87 );
+	linear-gradient( 127deg, #809fee, #d55fb0 );
+	
+	
+	linear-gradient( 127deg, #3be99e, #1b4975 );
+	linear-gradient( 127deg, #e3e366, #cc45c8 );
+	linear-gradient( 127deg, #d6d916, #ff49b6 );
+	linear-gradient( 127deg, #d3e01a, #e809be );
+	linear-gradient( 127deg, #e47f32, #56db71, #7e42a9 );  сделать светлииый чуть почсветлее, чтоб не выделялся
+	
+	ультра linear-gradient( 127deg, #b549f0, #22aff7, #4aff89 );
+	ультра linear-gradient( 127deg, #65fe88, #87c023, #dbe77a );
+	linear-gradient( 127deg, #fd3200, #3ab269, #d4d725 );  сделать левый светлее (выделяется)
+	linear-gradient( 127deg, #95d9a7, #c7ac3b, #f0320a );  исправить правый
+	
+	топ linear-gradient( 127deg, #e3ce1d, #53ec6b, #12b03b );
+	#f9227f, #d2e849,   эти 2 цвета  подряд
+	#c3fc17, #13ec6a
+	#ac34f3, #ddcf63
+	#d3f464, #28e1be
+	#46c3ed, #997e5d
+	#c7a2d9, #47bec3  можно добавить 3
+	#e5d414, #48e58e
+	#aefc17, #16a8b5
+	#adef5c, #1cc8d1
+	#40d97f, #e8b71c
+	#10b68f, #a16983 
+	#dfea46, #6a0716
+	#e66465, #9198e5
+	#3ffb4b
+	#44c556
+	#f5985e
+	#04f061
+	#17d9a7
+	#40f667
+	#2c956b
+	#09ea62, #0fd1a8, #0b4bf2  доделать
+	#cf55dd, #00cba6, #eeebae   либо без 1
+	#3de486, #d7d935, #56ca8a  на доделку
+	#df53c3, #ec7963, #b4e937 
+	#a869ca, #32d071, #411093  подправить средний
+	#f6ba06, #20ea6c, #0d6df2    подправить 1 и слегка 2
+	linear-gradient( 127deg, #e1722e, #b278f8, #f99176 );
+	linear-gradient( 127deg, #60ac28, #11d9ea, #5944bb );  подправит средний
+	топ linear-gradient( 127deg, #5e9f26, #37e08e, #10e3df );
+	linear-gradient( 127deg, #260301, #47b39d, #7061ba );   подправить средний
+	топ linear-gradient( 127deg, #56e711, #2198a7, #c4ba43 );
+	linear-gradient( 127deg, #12c04c, #6d868d, #3ec89d );   подправит средний
+	
+	linear-gradient( 127deg, #ac9a3b, #78f0f7, #17f4a7, #9ac240 );  подправить левый
+	linear-gradient( 127deg, #30f830, #30e74a, #25e2a8, #6ce6c1 );
+	
+	linear-gradient( 127deg, #3beacf, #8ec9aa, #abf073, #728d33 );  подправить 3
+
+	годно но переделать 2 цвета linear-gradient( 127deg, #1e3282, #16f070, #b698db, #0b3d70 );
+	
+	
+	e9f1f3
+*/
+
+
+/* End */

@@ -1,0 +1,242 @@
+<?php
+	#############################
+	### Переменные CSS ###
+	
+	# Настройка главного div
+	$preloader_background = "linear-gradient(45deg,#563bac 0,#5327ab 24%,#5b75ae 48%,#66dbb1 100%)" ;
+	#$preloader_background = "background: rgba(0,0,0,0.8)" ;
+	
+	$preloader_zindex = 10000;
+	#/
+	
+	
+	# ТОЛЬКО если $preloader_with_gif=TRUE(иначе игнор) = Про гифку
+	$preloader_cell_in_bg = "#fff"; # Цвет фона (подбирать под фон гифки) FFF
+	$preloader_cell_in_padding = "10px"; # Рамка вокруг гифки (дефолт 40)
+	$preloader_cell_in_border_radius = "30px"; # Скругление (дефолт 10)
+	#/
+	
+	
+	### Кнопка
+	$preloader_button_color = "#fff";
+	$preloader_button_font_color = "black";
+	$preloader_button_border_color = "red";
+	$preloader_button_zindex = 110;
+	#/
+	
+	#############################
+	### Переменные HTML ###
+	
+	# Включать только если реал долго грузит (иначе будет постоянно мелькать)
+	$preloader_with_gif = false; # Будет ли гифка?
+	
+	#$preloader_gif_source = "https://yraaa.ru/_pu/21/96994448.gif";
+	$preloader_gif_source = $PAGE_FOLDER . "/PRELOADER/gif/Preloader_1.gif";
+	
+	# ЮЗАТЬ ТОЛЬКО ГИФКИ
+	
+	
+	$preloader_with_btn = true;
+	
+	#############################
+	### Переменные JS ###
+		
+	# Главный убиратель
+	$preloader_fadeout_dalay = 300; # Время задержки исчезновения (дефолт 400)
+	$preloader_fadeout_duration = ' "slow" ' ; # Исчезновение лоадера блока в течении 600 мс
+	
+	# Все про кнопку
+	$preloader_btn_fadein_delay = 2000; # Через сколько появляется (2000)
+	$preloader_btn_fadein_duration = 600; # За сколько мс появляется(плавность) (600)
+	$preloader_fadeout_duration_btn = ' "slow" ' ; # (по кнопке) Исчезновение лоадера блока в течении 600 мс
+	
+	#############################
+?>
+<!-- SECTION_DESCRIPTION -->
+<section id="sec_preloader">
+	
+	
+	<!-- **** CSS **** -->
+	
+		<style>
+			
+			#preloader
+			{
+				position: fixed; /*фиксированное положение блока*/
+				left: 0; /*положение элемента слева*/
+				top: 0; /*положение элемента сверху*/
+				right: 0; /*положение элемента справа*/
+				bottom: 0; /*положение элемента снизу*/
+				z-index: <?php echo $preloader_zindex ; ?>; /*располагаем его над всеми элементами на странице*/
+				
+				display: table; /* Для следующих ксс */
+				
+				width: 100%;  /* Явно растягиваем на весь экран */
+				height: 100%;
+				
+				/*цвет заднего фона блока*/
+				background: <?php echo $preloader_background ; ?> ;
+				
+			}
+			
+			#preloader_cell
+			{
+				display: table-cell;
+				width: 100%;
+				height: 100%;
+				vertical-align: middle;
+				text-align: center;
+			}
+			
+			#preloader_cell_in
+			{
+				display: inline-block;
+				
+				padding:    <?php echo $preloader_cell_in_padding ; ?>;
+				background: <?php echo $preloader_cell_in_bg ; ?>;
+				
+				-webkit-border-radius: <?php echo $preloader_cell_in_border_radius ; ?>;
+				   -moz-border-radius: <?php echo $preloader_cell_in_border_radius ; ?>;
+						border-radius: <?php echo $preloader_cell_in_border_radius ; ?>;
+			}
+			
+			#preloader_button
+			{
+				background-color: <?php echo $preloader_button_color ; ?> ;
+				border: 2px solid <?php echo $preloader_button_border_color ; ?>;
+				color: 			  <?php echo $preloader_button_font_color ; ?> ; /* Цвет текста */
+				z-index: 		  <?php echo $preloader_button_zindex ; ?>; /* чтоб было над фоном лоадера */
+				
+				position: fixed;
+				text-align: center ;
+				height: 60px;
+				width: 100px;
+				right: 0%; /* Загоняю в угол */
+				font-size: 24px ;
+				border-radius: 30px;
+				margin: 10px ;
+				padding: 10px 0px ;
+				
+				cursor: pointer;
+				display: none;		
+			}
+		</style>
+		
+	<!-- **** /CSS **** -->
+	
+	
+	
+	
+	<!-- **** HTML **** -->
+	
+		<!-- Блок, который будет отображаться над страницей -->
+		<div id="preloader_main"> <!-- Для него НЕТ CSS, он только для норм работы кнопки -->
+			
+			<div id="preloader">
+				<?php  if( $preloader_with_gif ) : ?>
+					
+					<div id="preloader_cell">
+						<div id="preloader_cell_in">
+							
+							<img src="<?php echo $preloader_gif_source ; ?>" alt="" />
+							
+						</div>
+					</div>
+					
+				<?php  endif; ?>			
+			</div>
+			
+			<?php  if( $preloader_with_btn ) : ?>
+			
+			<!-- Close loader btn (After 2s)-->
+			<div id="preloader_button">
+				<span>
+					Close
+				</span>
+			</div>
+			
+			<?php  endif; ?>
+			
+		</div>
+		
+	<!-- **** /HTML **** -->
+	
+	
+	
+	
+	<!-- **** JS **** -->
+	
+		<script type="text/javascript">
+
+			$(window).on( 'load', function () {
+				
+				// Если управление уже тут, то кнопка закрытия не будет работать, ибо оно уже началось
+				
+				var $preloader = $('#preloader_main');
+				$preloader.delay( <?php echo $preloader_fadeout_dalay ; ?> );
+				$preloader.fadeOut( <?php echo $preloader_fadeout_duration ; ?> ); 
+			});
+
+			// OLD CODE $(window).load(function() {  $('#preloader_div').find('i').fadeOut().end().delay(300).fadeOut('slow'); });
+						
+		</script>
+		
+		
+		<script type="text/javascript">
+			// Кнопка уборки прелоадера
+			
+			// Таймаут появления
+			setTimeout( function() 
+			{
+				$("#preloader_button").fadeIn( <?php echo $preloader_btn_fadein_duration ; ?> );
+			
+			},    <?php echo $preloader_btn_fadein_delay ; ?>   );
+			
+			// Уборка
+			//jQuery(document).on('click', '#preloader_button', function(e) 
+			$(document).on('click', '#preloader_button', function(e) 
+			{
+				// Если управление уже в onLoad, то кнопка не будет работать (тк див вот вот уберется)
+				// Иначе норм работает
+				$('#preloader_main').fadeOut( <?php echo $preloader_fadeout_duration_btn ; ?> );
+				
+			});
+		</script>
+		
+	<!-- **** /JS **** -->
+	
+	
+</section>
+<?php
+
+#$SS_Class->Add_libs_for_include( array( "" ) );
+
+unset (
+		$preloader_background,
+		
+		$preloader_zindex,
+
+		$preloader_cell_in_bg,
+		$preloader_cell_in_padding,
+		$preloader_cell_in_border_radius,
+
+		$preloader_button_color,
+		$preloader_button_font_color,
+		$preloader_button_border_color,
+		$preloader_button_zindex,
+		
+		
+		$preloader_with_gif,
+		$preloader_gif_source,
+		
+		$preloader_with_btn,
+		
+		
+		$preloader_fadeout_dalay,
+		$preloader_fadeout_duration,
+
+		$preloader_btn_fadein_delay,
+		$preloader_btn_fadein_duration,
+		$preloader_fadeout_duration_btn
+		);
+?>
