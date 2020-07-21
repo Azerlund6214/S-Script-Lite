@@ -11,7 +11,8 @@ function addSourceLink()
 	var body_element = document.getElementsByTagName('body')[0];
 	
 	var selection = window.getSelection();	
-	var pagelink = "<br><br>Source: " + window.location.href;
+	//var pagelink = "<br><br>Source: " + window.location.href;
+	var pagelink = add_source_text + window.location.href;
 	var copytext = selection + pagelink;
 	
 	// переписать без дива, чтоб просто запихивался текст в селекшен
