@@ -1,0 +1,68 @@
+
+/*  */
+
+/*  */
+
+
+
+/* https://fonts.googleapis.com/css?family=Lato */
+
+.ff-lato           { font-family: 'Lato', sans-serif }
+
+
+.ff-montserrat-alt { font-family: 'Montserrat Alternates', sans-serif }
+.ff-playfair       { font-family: 'Playfair Display', sans-serif }
+.ff-poppins        { font-family: 'Poppins', sans-serif }
+.ff-pacifico       { font-family: 'Pacifico', sans-serif }
+.ff-roboto         { font-family: 'Roboto', sans-serif }
+.ff-roboto-slab    { font-family: 'Roboto Slab', sans-self }
+.ff-oxygen         { font-family: 'Oxygen', sans-self }
+.ff-times          { font-family: 'Times New Roman', sans-self }
+
+.ff-source-pro          { font-family: 'Source Serif Pro', serif }
+
+.ff-proxima-nova     { font-family: "Proxima Nova", sans-serif; }
+.ff-helvetica-neue  {font-family: "Helvetica Neue", sans-serif; }
+.ff-helvetica           {font-family: "Helvetica", sans-serif; }
+.ff-verdana           {font-family: "Verdana", sans-serif; }
+
+
+
+
+
+
+.font__family-montserrat-alt {
+	font-family: 'Montserrat Alternates', sans-serif
+}
+.font__family-playfair {
+	font-family: 'Playfair Display', sans-serif
+}
+.font__family-poppins {
+	font-family: 'Poppins', sans-serif
+}
+.font__family-pacifico {
+	font-family: 'Pacifico', sans-serif
+}
+.font__family-roboto {
+	font-family: 'Roboto', sans-serif;
+}
+.font__family-roboto-slab {
+	font-family: 'Roboto Slab', sans-serif
+}
+.font__family-oxygen {
+	font-family: 'Oxygen', sans-serif
+}
+.font__family-times-new-roman {
+	font-family: 'Times New Roman', sans-serif
+}
+
+
+
+/*
+
+ рнонбши  font-family: "BERNIERShade-Regular";
+*/
+
+
+
+/* End */

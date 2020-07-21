@@ -1,0 +1,115 @@
+
+
+<script type="text/javascript">
+	
+	jQuery( ЧТО )
+	$( ЧТО )
+	document - Весь хтмл
+	window - Область видимости (экран)
+	".#ТЭГ"
+	
+	
+	$( ЧТО ).СОБЫТИЕ( function(event) {  Что делать  });
+	$( document ).ready - хтмл загрузился
+	$( window ).resize - изменяли размер окна
+	.mousemove
+	.mouseout
+	.mouseover
+	
+	
+	
+	$( ЧТО ).mousemove( function(event) //получение координат относительно всей страницы
+	{
+		var X = event.pageX; // положения по оси X
+		var Y = event.pageY; // положения по оси Y
+
+		//var X = event.offsetX; // Альтернатива
+		//var Y = event.offsetY;
+		
+		console.log("X: " + X + " Y: " + Y); // вывод результата в консоль
+	});
+	
+	$( ЧТО ).mousemove( function(event) //Получение координат относительно элемента
+	{
+		// положение элемента
+		var pos = $(this).offset();
+		var elem_left = pos.left;
+		var elem_top  = pos.top;
+		// положение курсора внутри элемента
+		var Xinner = e.pageX - elem_left;
+		var Yinner = e.pageY - elem_top;
+		console.log("X: " + Xinner + " Y: " + Yinner); // вывод результата в консоль
+	});
+	
+	
+	
+	
+	
+	
+	
+	var window_width  = $(window).width();  // window.innerWidth
+	var window_height = $(window).height(); // window.innerHeight
+	
+	
+	var height = window.innerHeight;
+	var width = window.innerWidth;
+	
+	var height = window.event.offsetY; //робит
+	var width = window.event.offsetX;
+	
+	document.documentElement.clientWidth/document.documentElement.clientHeight
+	document.getElementById("main").innerHTML
+	
+    var height = screen.height
+	var width  = screen.width;
+	
+	// <div id="viewportsize" style="z-index:9999;position:fixed;bottom:0px;left:0px;color:#fff;background:#000;padding:10px"></div>
+	$('#viewportsize') .html('Height: ' + height + '<br>Width: ' + width);
+	
+	
+	$("#viewportsize").css("width", width); - установить значение
+	ЧТО .css('margin-top') - получить значение
+	ЧТО .css("top", знач ).css("left", знач);  (много значений за раз)
+	
+	
+	.offset() позиционирует любой элемент относительно левого верхнего угла ОКНА браузера
+	top  = $( ЧТО ).offset().top;
+	left = $( ЧТО ).offset().left;
+	
+	$( ЧТО ).offsetHeight  offsetWidth offsetTop  scrollHeight   scrollWidth 
+	
+	.position() позиционирует элемент только относительно левого верхнего угла своего ближайшего родителя
+	.position() учитывает смещение (top, bottom, left, right), не учитывает margin-ы
+	.position().top работает в полтора-два раза медленнее нежели вариант с this.offsetTop
+	top  = $( element ).position().top;
+	left = $( element ).position().left;
+	
+	
+	// !!!!!!!!!  понятный формат записи
+	window.onload = function() {  }
+	
+	
+	Размер до верха  $(window).scrollTop  ИЛИ document.documentElement.scrollTop
+			
+	
+	
+	
+	alert("123");
+	alert ('Размер экарана x='+width+' y='+height
+	
+	Math.round( fromTop );
+	Math.random()
+	
+	.toString( var123 )
+	
+	if ( typeof var123 == 'string' )
+	
+	var123.length
+	
+	
+	var target_tag = document.getElementById( target_id );
+	target_tag.style.position = "relative";
+	target_tag.classList.add('particles-content-raise');
+	
+	
+</script>

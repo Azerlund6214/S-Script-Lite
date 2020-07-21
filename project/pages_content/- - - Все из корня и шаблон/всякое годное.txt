@@ -1,0 +1,15 @@
+
+<a href = 'file.php' download>
+
+
+
+<a href="file.pdf" download>скачать</a>
+можно задать им€ сохран€емого файла:
+
+<a href="file.pdf" download="filename">скачать</a>
+Ќо работает не во всех браузерах.
+
+
+
+
+123
