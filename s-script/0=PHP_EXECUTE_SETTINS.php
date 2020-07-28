@@ -13,7 +13,7 @@
 		
 		#setlocale(LC_ALL, array("ru_RU.CP1251", "ru_SU.CP1251", "ru_RU", "russian", "ru_SU", "ru"));
 		
-		// ƒобавить временную зону по умолчанию
+		date_default_timezone_set("Europe/Moscow");
 
 		########################################
 			
