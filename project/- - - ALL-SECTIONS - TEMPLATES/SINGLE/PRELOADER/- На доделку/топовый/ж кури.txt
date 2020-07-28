@@ -1,9 +1,0 @@
-<script>
-
-jQuery( window ).load(function()
-{
-  // close loader
-  jQuery(".spinner_wrapper").css("display","none");
-});
-
-</script>

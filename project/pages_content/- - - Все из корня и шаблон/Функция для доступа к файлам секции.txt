@@ -1,8 +1,0 @@
-
-$path_to_section = SF_Echo_This_File_Path("GET","FOLDER",__DIR__)."/";
-
-
-старое
-В секции юзается ПЕРЕМЕННАЯ PAGE_FOLDER для доступа к папке секции
-
-123
