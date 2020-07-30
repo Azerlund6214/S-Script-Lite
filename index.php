@@ -103,15 +103,12 @@ echo "<html lang='ru'> \n";
 
         exit("123");
 
-
-		include "s-script/4=proj=favicon.html"; # ПРОЕКТ - иконки сайта
 		include "s-script/5=site=bootstrap-connection.html"; # САЙТ
 		include "s-script/6=site=css-univ-full.html"; # САЙТ = универсальные ксс
 		include "s-script/7=site=css-univ-vars.html"; # САЙТ = универсальные ксс переменные
 		include "s-script/8=proj=css_selectable.html"; # ПРОЕКТ - ксс для этого проекта
 		include "s-script/9=proj=fonts.html"; # ПРОЕКТ = Шрифты проекта
-		
-//echo "123";
+
 	echo "</head> \n\n\n";
 	
 	
