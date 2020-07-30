@@ -39,7 +39,7 @@ $SS_Class->Get_current_page_name(  ); # Пагинация - находим ну
 
 #========================
 
-// явная папка проекта тут и в Get_page_folder()
+// явная папка проекта тут, в Get_page_folder(), в начале 1=head... в переменной путей фавиконов
 
 # Подключаем главный файл со списком страниц проекта
 include "project/" . "defines=1=pages_info_arr.php";
@@ -101,18 +101,18 @@ echo "<html lang='ru'> \n";
 		include "s-script/0=s-script_logo_includer.php"; # САЙТ
 		include "s-script/1=head-all.html"; #
 
-        exit("123");
 
-		include "s-script/5=site=bootstrap-connection.html"; # САЙТ
-		include "s-script/6=site=css-univ-full.html"; # САЙТ = универсальные ксс
-		include "s-script/7=site=css-univ-vars.html"; # САЙТ = универсальные ксс переменные
-		include "s-script/8=proj=css_selectable.html"; # ПРОЕКТ - ксс для этого проекта
-		include "s-script/9=proj=fonts.html"; # ПРОЕКТ = Шрифты проекта
+        include "s-script/5=site=bootstrap-connection.html"; # САЙТ
+        include "s-script/6=site=css-univ-full.html"; # САЙТ = универсальные ксс
+        include "s-script/7=site=css-univ-vars.html"; # САЙТ = универсальные ксс переменные
+        include "s-script/8=proj=css_selectable.html"; # ПРОЕКТ - ксс для этого проекта
+        include "s-script/9=proj=fonts.html"; # ПРОЕКТ = Шрифты проекта
 
-	echo "</head> \n\n\n";
-	
-	
-	######################################################################
+    echo "</head> \n\n\n";
+
+   // exit("123");
+
+######################################################################
 	######################################################################
 	######################################################################
 	
