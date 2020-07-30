@@ -97,11 +97,13 @@ echo "<html lang='ru'> \n";
 	echo "<head>";
 		
 		# В этому моменту УЖЕ загружены все переменные проекта
-		
+
 		include "s-script/0=s-script_logo_includer.php"; # САЙТ
-		include "s-script/1=php-main-vars-data.html"; # САЙТ
-		include "s-script/2=site=meta.html"; # САЙТ = Кодировка и тд
-		include "s-script/3=proj-page=title-desc.html"; # СТРАНИЦА = TITLE И DESC
+		include "s-script/1=head-all.html"; #
+
+        exit("123");
+
+
 		include "s-script/4=proj=favicon.html"; # ПРОЕКТ - иконки сайта
 		include "s-script/5=site=bootstrap-connection.html"; # САЙТ
 		include "s-script/6=site=css-univ-full.html"; # САЙТ = универсальные ксс
