@@ -4,9 +4,7 @@
 	{
 
 		public $db; # Главное подключение к бд
-		
-		
-		public $is_connected = false;
+
 		
 		####################################
 		
@@ -14,7 +12,6 @@
 		public function Get_connection()
 		{
 			return $this -> db;
-			//добавить ссылку.
 		}
 		
 		public function __construct()
@@ -24,8 +21,15 @@
 
 		
 		
-		# Создание подключения
-		public function Connect( $host , &$user , &$pass  )
+
+        /**
+         * Подключиться к серверу СУБД
+         * @param string $host
+         * @param string $user
+         * @param string $pass
+         * @return bool - true либо exit()
+         */
+        public function Connect( $host , $user , $pass  )
 		{
 			
 			// MySQLi, процедурная часть
@@ -45,23 +49,29 @@
 			
 			
 			$this -> db = $mysqli;
-			$this -> is_connected = true;
 			
-			
-			unset( $user, $pass );
+
 				
 			//echo $mysqli->host_info . "\n";
 			
 			return true;
 		}
-		
-		// не тестил
+
+
+        /**
+         * Отключиться от сервера СУБД
+         */
 		public function Disconnect( )
 		{
 			$this->db->close();
 		}
 		
-		# Вывести последнюю ошибку mysqli
+
+
+        /**
+         * Вывести последнюю ошибку mysqli
+         * TODO: Добавить возможность возвращения bool, без Echo.
+         */
 		public function Get_error( )
 		{
 			if ( $this->db->errno != 0 )
@@ -71,58 +81,63 @@
 		}
 		
 		
-		// Не предполагает выачу результатов
+        /**
+         * Выполнить запрос БЕЗ возвращаемого результата
+         * @param $sql
+         * TODO: Добавить реакцию на ошибку в запросе(неудачный запрос при кривом sql)
+         */
 		public function Exec( $sql )
 		{
 			$this->db -> query( $sql );
 		
 		}
-		
-		
+
+        /**
+         * Выполнить запрос и вернуть результат
+         * @param string $sql
+         * @param string $fetch_type = all / assoc
+         * @return mixed
+         * TODO: Добавить другие виды фетчей
+         * TODO: Добавить реакцию на ошибку в запросе(неудачный запрос при кривом sql)
+         */
 		public function Query( $sql , $fetch_type = "all" )
 		{
 			
 			$result = $this->db -> query( $sql );
-			//printf("Select вернул ". $result->num_rows ." строк.");
-			
+			#print_r("Select вернул ". $result->num_rows ." строк.");
+
+            # В этом месте будет отлов ошибки запроса
 			
 			switch( $fetch_type )
 			{
-				case "all":   $fetched = $result -> fetch_all();  break;
-				case "assoc": $fetched = $result -> fetch_assoc(); break;
+				case "all":    return $result -> fetch_all();  break;
+				case "assoc": return  $result -> fetch_assoc(); break;
 				
 				default: exit("Невалидный fetch_type");
 			}
-			
-			
-			/* удаление выборки */
-			$result->free();
-			
-			
-			return $fetched;
+
+
 		}
-		
-		
-		
-		
-		
-		// робит
+
+
+        /**
+         * Выбрать рабочую БД
+         * @param string $target_db
+         */
 		public function Select_db( $target_db )
 		{
-			//echo "123";
 			$this->db -> query("USE $target_db");
 		}
 		
-		
-		# Проверка работоспособности.
+
+        /**
+         * Проверка работоспособности соединения с СУБД
+         * Выведет версию СУБД и выйдет.
+         */
 		function test_conn()
 		{
-
 			echo $this->Query('SELECT VERSION()')[0][0];
-				
-			
 			exit;
-		
 		}
 		
 		
@@ -140,26 +155,26 @@
 			
 			
 			
-// MySQLi, ООП
-if ($result = $mysqli->query($query))
-{
-   while ($user = $result->fetch_object('User'))
-   {
-      echo $user->info()."\n";
-   }
-}
-			
-			
-			
-			
-// MySQLi, "ручная" зачистка параметра
-$username = mysqli_real_escape_string($_GET['username']);
-$mysqli->query("SELECT * FROM users WHERE username = '$username'");
+            // MySQLi, ООП
+            if ($result = $mysqli->query($query))
+            {
+               while ($user = $result->fetch_object('User'))
+               {
+                  echo $user->info()."\n";
+               }
+            }
 
-// mysqli, подготовленные выражения
-$query = $mysqli->prepare('SELECT * FROM users WHERE username = ?');
-$query->bind_param('s', $_GET['username']);
-$query->execute();
+
+
+
+            // MySQLi, "ручная" зачистка параметра
+            $username = mysqli_real_escape_string($_GET['username']);
+            $mysqli->query("SELECT * FROM users WHERE username = '$username'");
+
+            // mysqli, подготовленные выражения
+            $query = $mysqli->prepare('SELECT * FROM users WHERE username = ?');
+            $query->bind_param('s', $_GET['username']);
+            $query->execute();
 
 		*/
 		
