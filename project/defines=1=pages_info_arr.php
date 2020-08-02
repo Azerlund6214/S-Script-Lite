@@ -81,6 +81,13 @@ $Page_folder = $SS_Class->Get_page_folder( ) ;
  
  $Pages_info_arr["youtube"]["BODY-MAIN"] []= $Page_folder . "/index.html";
 
+ ###############
+/*
+ $Pages_info_arr["online-chat"]["DESC"]  = "Это DESC O-C";
+ $Pages_info_arr["online-chat"]["TITLE"] = "Online-Chat";
+ 
+ $Pages_info_arr["online-chat"]["BODY-MAIN"] []= $Page_folder . "/index.html";
+*/
 
 ###############################
 
