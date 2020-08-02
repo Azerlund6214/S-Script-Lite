@@ -16,12 +16,12 @@
 	$arr_path = array(
 	
 		"database",
-		#"libs",
+		"libs",
 
 		"includes-class",
 		"includes-all",
-		"includes-dev",
-		"includes-sf"
+		#"includes-dev", удалено
+		#"includes-sf" удалено
 	
 	#
 	
