@@ -154,7 +154,8 @@ echo "<html lang='ru'> \n";
 			
 			echo "<main>\n";
 			echo "<!-- *** The main content *** -->"; # 
-			
+					
+				
 				foreach ( $SS_Class->Get_page_data( "BODY-MAIN" ) as $path )
 				{
 					echo "\n\n\n\n"; # Для отступа между секциями

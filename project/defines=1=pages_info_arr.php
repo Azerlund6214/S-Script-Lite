@@ -76,7 +76,10 @@ $Page_folder = $SS_Class->Get_page_folder( ) ;
 
 ###############
 
-
+ $Pages_info_arr["youtube"]["DESC"]  = "Это DESC yt";
+ $Pages_info_arr["youtube"]["TITLE"] = "Это TITLE yt";
+ 
+ $Pages_info_arr["youtube"]["BODY-MAIN"] []= $Page_folder . "/index.html";
 
 
 ###############################
