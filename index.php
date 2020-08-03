@@ -102,13 +102,13 @@ echo "<html lang='ru'> \n";
 		include "s-script/1=head-all.html"; #
 
 
-        include "s-script/5=site=bootstrap-connection.html"; # САЙТ
-        include "s-script/6=site=css-univ-full.html"; # САЙТ = универсальные ксс
-        include "s-script/7=site=css-univ-vars.html"; # САЙТ = универсальные ксс переменные
-        include "s-script/8=proj=css_selectable.html"; # ПРОЕКТ - ксс для этого проекта
-        include "s-script/9=proj=fonts.html"; # ПРОЕКТ = Шрифты проекта
+		include "s-script/5=site=bootstrap-connection.html"; # САЙТ
+		include "s-script/6=site=css-univ-full.html"; # САЙТ = универсальные ксс
+		include "s-script/7=site=css-univ-vars.html"; # САЙТ = универсальные ксс переменные
+		include "s-script/8=proj=css_selectable.html"; # ПРОЕКТ - ксс для этого проекта
+		include "s-script/9=proj=fonts.html"; # ПРОЕКТ = Шрифты проекта
 
-    echo "</head> \n\n\n";
+	echo "</head> \n\n\n";
 
    // exit("123");
 
@@ -117,7 +117,7 @@ echo "<html lang='ru'> \n";
 	######################################################################
 	
 	
-	echo '<body id="body_id" class="font-main grad-harmonic-energy ">'; # Весь боди будет этим шрифтом
+	echo '<body id="body_id" class="font-main grad-15 ">'; # Весь боди будет этим шрифтом
 		
 		###########################
 		### Генерация ВСЕГО body
