@@ -15,15 +15,8 @@
 	
 	$arr_path = array(
 	
-		"database",
-		"libs",
+	"libs"
 
-		"includes-class",
-		"includes-all",
-		#"includes-dev", удалено
-		#"includes-sf" удалено
-	
-	#
 	
 	);
 	
