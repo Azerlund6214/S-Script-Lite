@@ -1,6 +1,7 @@
 <?php
 
-	include "../../../s-script/backend_includer.php";
+	//include "../../../s-script/backend_includer.php";
+	include $_SERVER['DOCUMENT_ROOT']."/s-script/backend_includer.php";
 	
 	
 	require_once "Youtube_class.php";

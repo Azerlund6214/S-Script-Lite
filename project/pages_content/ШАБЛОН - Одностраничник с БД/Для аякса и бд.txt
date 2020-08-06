@@ -1,0 +1,9 @@
+
+
+include $_SERVER['DOCUMENT_ROOT']."/s-script/backend_includer.php";
+
+include "DB_Config.php";
+$PDO = new PDO_C( PDO_C::buildConnString($DB_CONFIG), $DB_CONFIG['username'], $DB_CONFIG['password'] );    
+#echo ( $PDO->checkConnection() ) ? "Yes" :  "No";
+
+123
