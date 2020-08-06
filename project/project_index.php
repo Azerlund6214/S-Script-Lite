@@ -23,8 +23,13 @@ $PDO = new PDO_C( PDO_C::buildConnString($DB_CONFIG), $DB_CONFIG['username'], $D
 
 
 
-# Где-то здесь надо запустить сессию
+# Р“РґРµ-С‚Рѕ Р·РґРµСЃСЊ РЅР°РґРѕ Р·Р°РїСѓСЃС‚РёС‚СЊ СЃРµСЃСЃРёСЋ
+/*
+session_start();
 
+if (!isset( $_SESSION["logged_user"] ) )
+	$_SESSION["logged_user"] = false;  # РџСЂРѕСЃС‚Рѕ СЃРѕР·РґР°СЋ РїРѕР»Рµ РµСЃР»Рё РµРіРѕ РЅРµС‚
+*/
 
 
 //exit($path_to_page_init);
