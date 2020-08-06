@@ -1,6 +1,6 @@
 <?php
 
-$this_dir = SF::Echo_This_File_Path( "DIR" , "GET" , __DIR__ );
+$PAGE_DIR = SF::Echo_This_File_Path( "DIR" , "GET" , __DIR__ );
 
 
 $PAGE_TITLE = "Page Title";
@@ -8,18 +8,15 @@ $PAGE_DESC  = "Page Desc";
 $PAGE_KEYWORDS  = ""; # ключ1, ключ2, ключ3
 
 
+$arr_scripts_header = array([ "" , "" ]);
 $arr_scripts_end_body = array([ "" , "" ]);
 
 
-/*
-		<!-- #################### -->
-		<!-- ######################################## -->
-		<!-- ############################################################ -->
-*/
-
+/*  <!-- #################### --> <!-- ######################################## -->
+	<!-- ############################################################ --> */
 
 $pre_html_end_time = microtime(true); # Закончили всю подготовку
-$html_start_time = microtime(true); # таймер для html
+$html_start_time = microtime(true); # Таймер для html
 
 ?>
 <!DOCTYPE html>
@@ -47,28 +44,26 @@ $html_start_time = microtime(true); # таймер для html
 		
 		<?php require_once "s-script/frontend/fonts/Includer.html"; ?>
 		
-		
-		
 		<!-- 123 -->
+		
+		
+		
+		
+		
+		<?php 
+		
+		
+		?>
+		
 		<?php #require_once ""; ДЕЛАТЬ ТАК?>
 		<?php #require_once ""; ?>
 		
 		
-		<?php
-			
-			/*
-
-			include "s-script/9=proj=fonts.html"; # ПРОЕКТ = Шрифты проекта
-			*/
-			
-			
-		?>
-	
+		
 	</head>
 	<body id="body_id" class="font-main grad-15 ">
 		header
 		preloader
-		
 		
 		<main>
 			<!-- *** The main content *** -->
@@ -81,6 +76,7 @@ $html_start_time = microtime(true); # таймер для html
 			
 			<!-- *** The main content *** -->
 		</main>
+		
 		<all-scripts>
 			<?php #include ""; 
 			
@@ -100,24 +96,21 @@ $html_start_time = microtime(true); # таймер для html
 				$SS_Class->Include_libs_for_sections( $Libs_names_match ) ;
 			*/
 			?>
-		
+			
 		</all-scripts>
+		
 		<!-- ######################################## -->
-		<?php
-				#$pre_html_end_time = microtime(true);
-				$pre_html_time_sec  = round( $pre_html_end_time  - $pre_html_start_time , 4);
+		<?php	$pre_html_time_sec  = round( $pre_html_end_time  - $pre_html_start_time , 4);
 				$pre_html_time_msec = $pre_html_time_sec*1000;
-				echo "<!-- От старта индекса до начала вывода HTML: $pre_html_time_sec"."s" . " = ($pre_html_time_msec ms) -->\n";
 				
 				$html_end_time = microtime(true);
 				$html_time_sec  = round( $html_end_time  - $html_start_time , 4);
-				$html_time_msec = $html_time_sec*1000;
-				echo "<!-- HTML is generated in: $html_time_sec"."s" . " = ($html_time_msec ms) -->\n\n";
-				
-				echo "<!-- Всего: " . ($html_time_sec + $pre_html_time_sec) ."s -->\n";
-				echo "<!-- Всего: " . ($html_time_msec + $pre_html_time_msec) ."ms -->";
-		?>
+				$html_time_msec = $html_time_sec*1000; ?>
 		
+			<!-- От старта индекса до начала вывода HTML: <?php echo $pre_html_time_sec."s" . " = ($pre_html_time_msec ms)"; ?> -->
+			<!-- HTML is generated in: <?php echo $html_time_sec."s = ($html_time_msec ms)"?> -->
+			<!-- Всего: <?php echo ($html_time_sec + $pre_html_time_sec) ?>s -->
+			<!-- Всего: <?php echo ($html_time_msec + $pre_html_time_msec) ?>ms -->
 		
 	</body>
 </html>
@@ -132,4 +125,5 @@ $html_start_time = microtime(true); # таймер для html
 ##                ##
 #####          #####
 ####################
+
 ?>
