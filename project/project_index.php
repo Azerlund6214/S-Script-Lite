@@ -1,12 +1,14 @@
 <?php
 
 include "s-script/backend_includer.php";
+include "s-script/frontend_includer.php";
 
 
 
 include "project/project_routes.php";
 $path_to_page_init = Paginator::getRouteToFile( $ROUTES );
 //echo "<pre>"; var_dump( $path_to_page_init ); echo "</pre>"; exit("proj index");
+
 
 
 
