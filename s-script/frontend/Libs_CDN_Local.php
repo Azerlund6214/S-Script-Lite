@@ -3,7 +3,28 @@
 $path_to_libs_local = "s-script/frontend/js-libs-local";
 
 $ARR_FRONTEND_LIBS = array(
-					
+	
+	/* ################################## */
+	
+	'example-1.2-LOC'     => [ '<script src="'.$path_to_libs_local.'/.js" type="text/javascript"> </script>' ],
+	'example_1.2-CDN'     => [ '<script src="" type="text/javascript"> </script>' ],
+	'example'     => [
+							'<!--  -->',
+							'<script src="/s-script/.js" type="text/javascript"> </script>',
+							],
+	
+	'test'     => ["test-test"],
+
+	/* ################################## */
+		
+	'JQuery-3.4.1-CDN'     => [ '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"> </script>' ],
+	'JQuery-3.4.1-LOC'     => [ '<script src="'.$path_to_libs_local.'/JQuery-Local/3.4.1/jquery.min.js" type="text/javascript"> </script>' ],
+	
+	
+	
+	
+	/* ################################## */
+	
 	'Smooth-Scroll-Nav'     => [
 								'<!-- Плавная прокрутка = Работает + учитывает высоту навбара(сам дописывал) -->',
 								'<script src="'.$path_to_libs_local.'/ALL=SmoothScroll/Smooth-Scroll-Nav/smooth-scroll-nav-final-1.js" type="text/javascript"> </script>',
@@ -20,36 +41,12 @@ $ARR_FRONTEND_LIBS = array(
 	
 	'UNIV_Exec_AJAX'     => [
 								'<!-- *** ФУНКЦИЯ ДЛЯ АЯКСА = ВСЕ ИДЕТ ЧЕРЕЗ НЕЁ *** -->',
-								'<script src="'.$path_to_libs_local.'/univ_exec_ajax.js" type="text/javascript"> </script>',
+								'<script src="'.$path_to_libs_local.'/Univ_Exec_Ajax.js" type="text/javascript"> </script>',
 								],
 	
-	'test123'     => "ссылка на сдн  СРАЗУ ЛИНКИ!!!! <link...>",
-	'название-версия'     => "ссылка на сдн",
 	
+	/* ################################## */
 	
-	'123'     => ["локальный путь к хтмл с линками"],
-	
-
-	'example'     => [
-							'<!--  -->',
-							'<script src="/s-script/.js" type="text/javascript"> </script>',
-							],
-	
-	
-
-
-	
-	'название'     => "ссылка на сдн   МОЖНО сразу несколько лнков в одном массиве. Главное чтоб ровно выводилось",
-	'название-версия'     => "ссылка на сдн",
-	'название-версия'     => "ссылка на сдн",
-	
-	
-	'test'     => ["test-test"],
-	
-	
-	#''            => $path_to_pages . "landing/Page_index.html"
-	
-  
 );
 
 

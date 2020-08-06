@@ -4,7 +4,7 @@
 	
 	
 	# Подключаются в head на ВСЕХ страницах
-	$arr_libs_for_project = array( "UNIV_Exec_AJAX" , "Smooth-Scroll-Nav", "BigAntiplagiatSystem"  ); # Можно оставлять без элементов
+	$arr_libs_for_project = array( "UNIV_Exec_AJAX" , "Smooth-Scroll-Nav"  ); # Можно оставлять без элементов
 	
 	
 	
