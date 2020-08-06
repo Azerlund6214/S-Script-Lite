@@ -2,15 +2,15 @@
 
 
 
-ИТОГОВЫЙ СЕРВИС https://www.favicon-generator.org/
-Заливаю изображение
-Скачиваю архив
-Тупо скидываю все картинки в папку
+РРўРћР“РћР’Р«Р™ РЎР•Р Р’РРЎ https://www.favicon-generator.org/
+Р—Р°Р»РёРІР°СЋ РёР·РѕР±СЂР°Р¶РµРЅРёРµ
+РЎРєР°С‡РёРІР°СЋ Р°СЂС…РёРІ
+РўСѓРїРѕ СЃРєРёРґС‹РІР°СЋ РІСЃРµ РєР°СЂС‚РёРЅРєРё РІ РїР°РїРєСѓ
 
 
-Проверка видят ли поисковики фавикон:
-http://favicon.yandex.net/favicon/САЙТ.com
-https://www.google.com/s2/favicons?domain=САЙТ.com
+РџСЂРѕРІРµСЂРєР° РІРёРґСЏС‚ Р»Рё РїРѕРёСЃРєРѕРІРёРєРё С„Р°РІРёРєРѕРЅ:
+http://favicon.yandex.net/favicon/РЎРђР™Рў.com
+https://www.google.com/s2/favicons?domain=РЎРђР™Рў.com
 
 
 
@@ -19,7 +19,7 @@ https://www.google.com/s2/favicons?domain=САЙТ.com
 
 =====================
 
-Другой СЕРВИС https://realfavicongenerator.net/
-Он генерит другие размеры, придется дописывать CSS
+Р”СЂСѓРіРѕР№ РЎР•Р Р’РРЎ https://realfavicongenerator.net/
+РћРЅ РіРµРЅРµСЂРёС‚ РґСЂСѓРіРёРµ СЂР°Р·РјРµСЂС‹, РїСЂРёРґРµС‚СЃСЏ РґРѕРїРёСЃС‹РІР°С‚СЊ CSS
 
 123
