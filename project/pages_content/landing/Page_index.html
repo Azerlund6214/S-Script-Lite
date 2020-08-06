@@ -8,8 +8,8 @@ $PAGE_DESC  = "Page Desc";
 $PAGE_KEYWORDS  = ""; # ключ1, ключ2, ключ3
 
 
-$arr_scripts_header = array([ "" , "" ]);
-$arr_scripts_end_body = array([ "" , "" ]);
+# В хедер вставлять все руками
+$arr_scripts_end_body = array(  );
 
 
 /*  <!-- #################### --> <!-- ######################################## -->
@@ -44,21 +44,25 @@ $html_start_time = microtime(true); # Таймер для html
 		
 		<?php require_once "s-script/frontend/fonts/Includer.html"; ?>
 		
-		<!-- 123 -->
-		
-		
-		
-		
-		
+		<!-- *** Libraries For ALL PAGES *** -->
 		<?php 
-		
-		
+		if( count($arr_libs_for_project) )
+			foreach( $arr_libs_for_project as $one_target_lib )
+			{
+				if( ! array_key_exists($one_target_lib, $ARR_FRONTEND_LIBS) )
+					exit ( "\nБиблиотека $one_target_lib не найдена в массиве соответствия." );
+				
+				foreach( $ARR_FRONTEND_LIBS[$one_target_lib] as $str )
+					echo "\n			"."$str";
+				echo "\n";
+			}
+		echo "\n";
 		?>
+		<!-- *** Libraries For ALL PAGES *** -->
 		
-		<?php #require_once ""; ДЕЛАТЬ ТАК?>
+		<!-- ############################################################ --> */
+		
 		<?php #require_once ""; ?>
-		
-		
 		
 	</head>
 	<body id="body_id" class="font-main grad-15 ">
@@ -78,25 +82,21 @@ $html_start_time = microtime(true); # Таймер для html
 		</main>
 		
 		<all-scripts>
-			<?php #include ""; 
-			
-			/*
-			
-			сделать предподключение
-			
-			
-			# Подключение скриптов, общих для всех сайтов
-				include "s-script/90=site=libs-includer.html";
-				
-				
-				# Массив соответствия имен
-				include "s-script/frontend-libs-for-pages/0=All_Libs_paths.php";
-				
-				# Подключение только нужных библиотек
-				$SS_Class->Include_libs_for_sections( $Libs_names_match ) ;
-			*/
+			<!-- *** Libraries ONLY FOR THIS PAGE *** -->
+			<?php 
+			if( count($arr_scripts_end_body) )
+				foreach( $arr_scripts_end_body as $one_target_lib )
+				{
+					if( ! array_key_exists($one_target_lib, $ARR_FRONTEND_LIBS) )
+						exit ( "\nБиблиотека $one_target_lib не найдена в массиве соответствия." );
+					
+					foreach( $ARR_FRONTEND_LIBS[$one_target_lib] as $str )
+						echo "\n			"."$str";
+					echo "\n";
+				}
+			echo "\n";
 			?>
-			
+			<!-- *** Libraries ONLY FOR THIS PAGE *** -->
 		</all-scripts>
 		
 		<!-- ######################################## -->

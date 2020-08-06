@@ -1,35 +1,56 @@
 <?php
 
+$path_to_libs_local = "s-script/frontend/js-libs-local";
 
-$LIBS_CDN = array(
+$ARR_FRONTEND_LIBS = array(
 					
-					'название'     => "ссылка на сдн  СРАЗУ ЛИНКИ!!!! <link...>",
-					'название-версия'     => "ссылка на сдн",
-					'название-версия'     => "ссылка на сдн",
-					
-					
-					'название'     => "локальный путь к хтмл с линками",
-					
-					
-				  
-				);
+	'Smooth-Scroll-Nav'     => [
+								'<!-- РџР»Р°РІРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР° = Р Р°Р±РѕС‚Р°РµС‚ + СѓС‡РёС‚С‹РІР°РµС‚ РІС‹СЃРѕС‚Сѓ РЅР°РІР±Р°СЂР°(СЃР°Рј РґРѕРїРёСЃС‹РІР°Р») -->',
+								'<script src="'.$path_to_libs_local.'/ALL=SmoothScroll/Smooth-Scroll-Nav/smooth-scroll-nav-final-1.js" type="text/javascript"> </script>',
+								],
+	
+	'BigAntiplagiatSystem'     => [
+								'<!-- BAS - Big Antiplagiat System -->',
+								'<script src="'.$path_to_libs_local.'/BAS=BigAntiplagiatSystem/big_antiplagiat_main_settins.js" type="text/javascript"> </script>',
+								'<script src="'.$path_to_libs_local.'/BAS=BigAntiplagiatSystem/misc.js"              type="text/javascript"> </script>',
+								'<script src="'.$path_to_libs_local.'/BAS=BigAntiplagiatSystem/hotkeys_my_final.js"  type="text/javascript"> </script>',
+								'<script src="'.$path_to_libs_local.'/BAS=BigAntiplagiatSystem/block_selection.js"   type="text/javascript"> </script>',
+								'<script src="'.$path_to_libs_local.'/BAS=BigAntiplagiatSystem/text_source_adder.js" type="text/javascript"> </script>',
+								],
+	
+	'UNIV_Exec_AJAX'     => [
+								'<!-- *** Р¤РЈРќРљР¦РРЇ Р”Р›РЇ РђРЇРљРЎРђ = Р’РЎР• РР”Р•Рў Р§Р•Р Р•Р— РќР•РЃ *** -->',
+								'<script src="'.$path_to_libs_local.'/univ_exec_ajax.js" type="text/javascript"> </script>',
+								],
+	
+	'test123'     => "СЃСЃС‹Р»РєР° РЅР° СЃРґРЅ  РЎР РђР—РЈ Р›РРќРљР!!!! <link...>",
+	'РЅР°Р·РІР°РЅРёРµ-РІРµСЂСЃРёСЏ'     => "СЃСЃС‹Р»РєР° РЅР° СЃРґРЅ",
+	
+	
+	'123'     => ["Р»РѕРєР°Р»СЊРЅС‹Р№ РїСѓС‚СЊ Рє С…С‚РјР» СЃ Р»РёРЅРєР°РјРё"],
+	
+
+	'example'     => [
+							'<!--  -->',
+							'<script src="/s-script/.js" type="text/javascript"> </script>',
+							],
+	
+	
+
 
 	
-$path_to_libs_local = "s-script/frontend/";
-$LIBS_LOCAL = array(
-					
-					'название'     => "ссылка на сдн   МОЖНО сразу несколько лнков в одном массиве. Главное чтоб ровно выводилось",
-					'название-версия'     => "ссылка на сдн",
-					'название-версия'     => "ссылка на сдн",
-					
-					
-					'название'     => "локальный путь ",
-					
-					
-					''            => $path_to_pages . "landing/Page_index.html"
-					
-				  
-				);
+	'РЅР°Р·РІР°РЅРёРµ'     => "СЃСЃС‹Р»РєР° РЅР° СЃРґРЅ   РњРћР–РќРћ СЃСЂР°Р·Сѓ РЅРµСЃРєРѕР»СЊРєРѕ Р»РЅРєРѕРІ РІ РѕРґРЅРѕРј РјР°СЃСЃРёРІРµ. Р“Р»Р°РІРЅРѕРµ С‡С‚РѕР± СЂРѕРІРЅРѕ РІС‹РІРѕРґРёР»РѕСЃСЊ",
+	'РЅР°Р·РІР°РЅРёРµ-РІРµСЂСЃРёСЏ'     => "СЃСЃС‹Р»РєР° РЅР° СЃРґРЅ",
+	'РЅР°Р·РІР°РЅРёРµ-РІРµСЂСЃРёСЏ'     => "СЃСЃС‹Р»РєР° РЅР° СЃРґРЅ",
+	
+	
+	'test'     => ["test-test"],
+	
+	
+	#''            => $path_to_pages . "landing/Page_index.html"
+	
+  
+);
 
 
 ?>

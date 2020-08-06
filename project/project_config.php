@@ -3,11 +3,14 @@
 	# Тут все константы этого конкретного проекта
 	
 	
+	# Подключаются в head на ВСЕХ страницах
+	$arr_libs_for_project = array( "UNIV_Exec_AJAX" , "Smooth-Scroll-Nav", "BigAntiplagiatSystem"  ); # Можно оставлять без элементов
 	
-	# Это инклудится в файле 8=... в путь к файлу
+	
+	
 	# Дефолтное значение = 0
 	# Возможные значения справа не всегда актуальны
-	# Смотреть полый список в папке frontend-selectable
+	# Смотреть полый список в папке frontend/css-selectable
 	$PROJECT_SELECTABLE_CSS = array(
 	
 		"text-sel-color" => "1",   # 0 1 2
@@ -21,8 +24,7 @@
 	
 	
 	
-	# Это инклудится в файле 9=... в путь к файлу
-	# Смотреть полный список в папке frontend-fonts
+	# Смотреть полный список в папке frontend/fonts
 	$PROJECT_FONTS = array(
 
 	"CDN-GF# main #Roboto      #400,700#cyrillic#sans-serif",
