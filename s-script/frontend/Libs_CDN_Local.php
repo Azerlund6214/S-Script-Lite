@@ -21,6 +21,18 @@ $ARR_FRONTEND_LIBS = array(
 	'JQuery-3.4.1-LOC'     => [ '<script src="'.$path_to_libs_local.'/JQuery-Local/3.4.1/jquery.min.js" type="text/javascript"> </script>' ],
 	
 	
+	'FontAwesome-5.13.0-CDN' => [
+						'<!-- FontAwesome v5.13.0 CDN -->',
+						'<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />',						],
+	/*	Нужно правильно прописывать классы Font Awesome     юзать только полный ксс, иначе могут быть квадраты
+		для v5 <i class="fas fa-camera-retro"></i>
+		для v4 <i class="fa fa-camera-retro"></i>	*/
+
+		
+	'Animate-3.7.2-CDN' => [
+						'<!-- Animate.css v3.7.2 CDN -->',
+						'<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">',						],
+	
 	
 	
 	/* ################################## */
