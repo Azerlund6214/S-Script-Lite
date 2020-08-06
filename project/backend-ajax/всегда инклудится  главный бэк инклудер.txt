@@ -1,7 +1,0 @@
-
-
-
-через SERVER[DOC_ROOT]."/b_init.php"
-
-
-123
