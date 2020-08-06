@@ -19,6 +19,12 @@ $PDO = new PDO_C( PDO_C::buildConnString($DB_CONFIG), $DB_CONFIG['username'], $D
 //echo ( $PDO->checkConnection() ) ? "Yes" :  "No";
 
 
+
+
+# Где-то здесь надо запустить сессию
+
+
+
 //exit($path_to_page_init);
 
 include $path_to_page_init;

@@ -2,34 +2,113 @@
 
 $this_dir = SF::Echo_This_File_Path( "DIR" , "GET" , __DIR__ );
 
+
+
+$arr_scripts_end_body = array([ "" , "" ]);
+
+
+/*
+		<!-- #################### -->
+		<!-- ######################################## -->
+		<!-- ############################################################ -->
+*/
+
+
+$pre_html_end_time = microtime(true); # Закончили всю подготовку
+$html_start_time = microtime(true); # таймер для html
+
 ?>
 <!DOCTYPE html>
 <html lang='ru'>
 	<head>
+	
+		<?php #include ""; ДЕЛАТЬ ТАК?>
+		<?php #include ""; ?>
+		
+		
 		<?php
-			# � ����� ������� ��� ��������� ��� ���������� �������
-			
 			
 			/*
-			include "s-script/0=s-script_logo_includer.php"; # ����
+			include "s-script/0=s-script_logo_includer.php"; # САЙТ
 			include "s-script/1=head-all.html"; #
 			
 			
-			include "s-script/5=site=bootstrap-connection.html"; # ����
-			include "s-script/6=site=css-univ-full.html"; # ���� = ������������� ���
-			include "s-script/7=site=css-univ-vars.html"; # ���� = ������������� ��� ����������
-			include "s-script/8=proj=css_selectable.html"; # ������ - ��� ��� ����� �������
-			include "s-script/9=proj=fonts.html"; # ������ = ������ �������
+			include "s-script/5=site=bootstrap-connection.html"; # САЙТ
+			include "s-script/6=site=css-univ-full.html"; # САЙТ = универсальные ксс
+			include "s-script/7=site=css-univ-vars.html"; # САЙТ = универсальные ксс переменные
+			include "s-script/8=proj=css_selectable.html"; # ПРОЕКТ - ксс для этого проекта
+			include "s-script/9=proj=fonts.html"; # ПРОЕКТ = Шрифты проекта
 			*/
 			
 			
 		?>
+	
 	</head>
 	<body id="body_id" class="font-main grad-15 ">
-	body
+		header
+		preloader
+		
+		
+		<main>
+			<!-- *** The main content *** -->
+			
+			
+		body
+		body
+		body
+			
+			
+			<!-- *** The main content *** -->
+		</main>
+		<all-scripts>
+			<?php #include ""; 
+			
+			/*
+			
+			сделать предподключение
+			
+			
+			# Подключение скриптов, общих для всех сайтов
+				include "s-script/90=site=libs-includer.html";
+				
+				
+				# Массив соответствия имен
+				include "s-script/frontend-libs-for-pages/0=All_Libs_paths.php";
+				
+				# Подключение только нужных библиотек
+				$SS_Class->Include_libs_for_sections( $Libs_names_match ) ;
+			*/
+			?>
+		
+		</all-scripts>
+		<!-- ######################################## -->
+		<?php
+				#$pre_html_end_time = microtime(true);
+				$pre_html_time_sec  = round( $pre_html_end_time  - $pre_html_start_time , 4);
+				$pre_html_time_msec = $pre_html_time_sec*1000;
+				echo "<!-- От старта индекса до начала вывода HTML: $pre_html_time_sec"."s" . " = ($pre_html_time_msec ms) -->\n";
+				
+				$html_end_time = microtime(true);
+				$html_time_sec  = round( $html_end_time  - $html_start_time , 4);
+				$html_time_msec = $html_time_sec*1000;
+				echo "<!-- HTML is generated in: $html_time_sec"."s" . " = ($html_time_msec ms) -->\n\n";
+				
+				echo "<!-- Всего: " . ($html_time_sec + $pre_html_time_sec) ."s -->\n";
+				echo "<!-- Всего: " . ($html_time_msec + $pre_html_time_msec) ."ms -->";
+		?>
+		
+		
 	</body>
 </html>
 <?php
 
 
+
+####################
+#####          #####
+##                ##
+#                  #
+##                ##
+#####          #####
+####################
 ?>

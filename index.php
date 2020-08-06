@@ -6,7 +6,7 @@
 # ХОСТИНГ = 
 # ХОСТИНГ = 
 
-
+$pre_html_start_time = microtime(true); # таймер для скрипта
 
 include "project/project_index.php";
 
