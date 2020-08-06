@@ -1,5 +1,10 @@
 <?php
 
+# Убрать в отдельный файл со всеми глоб переменными
+#$ROOT_PATH = $_SERVER['DOCUMENT_ROOT'];
+
+
+
 include "s-script/backend_includer.php";
 include "s-script/frontend_includer.php";
 

@@ -11,6 +11,16 @@ $PAGE_KEYWORDS  = ""; # ключ1, ключ2, ключ3
 $arr_scripts_end_body = array(  );
 
 
+include "DB_Config.php";
+$PDO = new PDO_C( PDO_C::buildConnString($DB_CONFIG), $DB_CONFIG['username'], $DB_CONFIG['password'] );    
+#echo ( $PDO->checkConnection() ) ? "Yes" :  "No";
+	
+
+
+
+
+
+
 /*  <!-- #################### --> <!-- ######################################## -->
 	<!-- ############################################################ --> */
 
@@ -71,17 +81,15 @@ $html_start_time = microtime(true); # Таймер для html
 	</head>
 	<body id="body_id" class="font-main grad-15 ">
 		
-		<?php require_once $PAGE_DIR."/111111111.html"; ?>
 		
 		<main>
 			<!-- *** The main content *** -->
 			
-			<?php require_once $PAGE_DIR."/111111111.html"; ?>
+			<?php require_once $PAGE_DIR."/index.html"; ?>
 			
 			<!-- *** The main content *** -->
 		</main>
 		
-		<?php require_once $PAGE_DIR."/111111111.html"; ?>
 		
 		<all-scripts>
 			<!-- script src=" ЗАПОЛНИТЬ " type="text/javascript"> </script> -->

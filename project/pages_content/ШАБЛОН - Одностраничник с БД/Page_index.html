@@ -11,6 +11,16 @@ $PAGE_KEYWORDS  = ""; # ключ1, ключ2, ключ3
 $arr_scripts_end_body = array(  );
 
 
+include "DB_Config.php";
+$PDO = new PDO_C( PDO_C::buildConnString($DB_CONFIG), $DB_CONFIG['username'], $DB_CONFIG['password'] );    
+echo ( $PDO->checkConnection() ) ? "Yes" :  "No";
+	
+
+
+
+
+
+
 /*  <!-- #################### --> <!-- ######################################## -->
 	<!-- ############################################################ --> */
 
