@@ -11,5 +11,13 @@
 					'password' => 'root',
 				  );
 	
-	
+	/*
+		dbms
+		'host' => 'localhost',
+		'name' => 'dbname',
+		'port' => 3306,
+		'user' => 'root',
+		'pass' => ''
+		char
+	*/
 ?>

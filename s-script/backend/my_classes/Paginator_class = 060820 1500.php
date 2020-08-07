@@ -48,7 +48,7 @@ class Paginator
         $uri = $_SERVER['REQUEST_URI']; # /category/page#a123?sort=asc
         $expl = explode('?', $uri);
         $url = $expl[0]; # /category/page
-        $params = $expl[1]; # ?sort=asc
+        //$params = $expl[1]; # ?sort=asc
     
         #$url = explode('/', $url); # ( "" , category , page )
         #$url = trim( $url[1] );

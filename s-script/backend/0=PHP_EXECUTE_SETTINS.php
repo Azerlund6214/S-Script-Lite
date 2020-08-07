@@ -53,11 +53,16 @@
 		
 		########################################
 		
-		# ini_set('html_errors', 'on');
-		# ini_set('display_errors', 1);
-		 
-		# error_reporting(~E_DEPRECATED); //E_ALL
+		# ~E_... значит не показывать этот тип
+		# E_ALL & ~E_NOTICE = отображение всех ошибок, кроме E_NOTICE
 		
+		# error_reporting(E_DEPRECATED); //E_ALL
+		error_reporting(E_ALL);
+
+		# ini_set('html_errors', 'on');
+		 ini_set('display_errors', 1);
+		#если display_errors = on, то в случае ошибки браузер получит html c текстом ошибки и кодом 200
+		#если же display_errors = off, то для фатальных ошибок код ответа будет 500 и результат не будет возвращён пользователю, для остальных ошибок — код будет работать неправильно, но никому об этом не расскажет
 		########################################
 		
 		

@@ -8,7 +8,7 @@
 include "s-script/backend_includer.php";
 include "s-script/frontend_includer.php";
 
-
+# проинклудить все backend-includes  проекта
 
 include "project/project_routes.php";
 $path_to_page_init = Paginator::getRouteToFile( $ROUTES );
